@@ -1,0 +1,20 @@
+<div>
+  <h1>Parabéns!</h1>
+  <h4>Seu componente está sendo exibido em tela</h4>
+  <hr>
+  <h5>Como aparece o seu evento abaixo?</h5>
+<div *ngFor="let e of evento">
+  <div style="margin-top:30px">
+    Evento: {{e.name}}
+  </div>
+  <div>
+    Data: <app-datas [data]="e.date"></app-datas>
+  </div>
+  <div>
+    Hora: {{e.time}}
+  </div>
+  <div >
+    Endereço: {{e.location?.address}}, {{e.location?.city}}, {{ e.location?.country}}
+  </div>
+</div>
+</div>
