@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventosComponent implements OnInit {
   evento = [
-    {name: 'PHP Conference', date: '6/30/2020', time: '10am', location: {address: 'UniBH ', city: 'Belo Horizonte', country: 'Brasil'}},
+    {name: 'PHP Conference',
+     date: '6/30/2020',
+     time: '10am',
+     location: {address: 'UniBH ', city: 'Belo Horizonte', country: 'Brasil'}},
 
  ];
 

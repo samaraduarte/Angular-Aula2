@@ -1,15 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { DatasComponent } from './datas/datas.component';
+import { EnderecoComponent } from './eventos/endereco/endereco.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventosComponent,
-    DatasComponent
+    DatasComponent,
+    EnderecoComponent
   ],
   imports: [
     BrowserModule
