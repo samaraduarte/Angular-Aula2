@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-endereco',
@@ -11,9 +11,18 @@ export class EnderecoComponent implements OnInit {
   @Input() cidade;
   @Input() pais;
 
+  @Output() atualizarEndereco = new EventEmitter();
+
+  atualizaEndereco() {
+    let name = 'Villa Mix';
+    let location = {address: 'Mineirinho', city: 'Belo Horizonte', country: 'Brasil'};
+    this.atualizarEndereco.emit(name);
+    this.atualizarEndereco.emit(location);
+  }
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
+
+
