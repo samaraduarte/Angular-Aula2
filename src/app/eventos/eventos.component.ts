@@ -20,9 +20,13 @@ export class EventosComponent implements OnInit {
   }
 
   receberEnderecoAtualizado($event) {
-    this.evento = Object.values($event);
     console.log($event);
-    $event.atualizaEndereco();
+
+    const eventEmitter = {};
+    // tslint:disable-next-line: forin
+    for (const i in this.evento){
+      this.evento[i] = $event[i];
+    }
  }
 }
 
