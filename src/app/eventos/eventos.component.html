@@ -13,13 +13,12 @@
   <div>
     Hora: {{ evento?.time }}
   </div>
-
   <div *ngIf="evento.location">
     Endereço:
-      <app-endereco [endereco]="evento?.location?.address"></app-endereco>
-      <app-endereco [cidade]="evento?.location?.city"></app-endereco>
-      <app-endereco [pais]="evento?.location?.country" ></app-endereco>
-      <app-endereco (atualizarEndereco)="receberEnderecoAtualizado($event)"></app-endereco>
-</div>
-
+    <app-endereco [endereco]="evento?.location?.address"
+      [cidade]="evento?.location?.city"
+      [pais]="evento?.location?.country"
+      (atualizarEndereco)="receberEnderecoAtualizado($event)">
+    </app-endereco>
+  </div>
 </div>

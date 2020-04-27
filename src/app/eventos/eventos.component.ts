@@ -1,5 +1,5 @@
 import { EnderecoComponent } from './endereco/endereco.component';
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-eventos',
@@ -24,6 +24,8 @@ export class EventosComponent implements OnInit {
   receberEnderecoAtualizado($event) {
     this.evento = Object.values($event);
     console.log($event);
+    $event.atualizaEndereco();
+
  }
 }
 
