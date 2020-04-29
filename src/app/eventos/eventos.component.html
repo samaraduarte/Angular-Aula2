@@ -3,22 +3,19 @@
   <h4>Seu componente está sendo exibido em tela</h4>
   <hr>
   <h5>Como aparece o seu evento abaixo?</h5>
-<div *ngFor="let evento of evento">
+<div *ngFor="let evento of eventos">
   <div style="margin-top:30px">
-    Evento: {{ evento?.name }}
+    Evento: {{ evento.name }}
   </div>
   <div>
-    Data: <app-datas [data]="evento?.date"></app-datas>
+    Data: <app-datas [data]="evento.date"></app-datas>
   </div>
   <div>
-    Hora: {{ evento?.time }}
+    Hora: {{ evento.time }}
   </div>
-  <div *ngIf="evento.location">
+  <div >
     Endereço:
-    <app-endereco [endereco]="evento?.location?.address"
-      [cidade]="evento?.location?.city"
-      [pais]="evento?.location?.country"
-      (atualizarEndereco)="receberEnderecoAtualizado($event)">
+    <app-endereco *ngIf="evento.location" (atualizarEndereco)="receberEnderecoAtualizado($event)" [location]="evento.location">
     </app-endereco>
   </div>
 </div>
